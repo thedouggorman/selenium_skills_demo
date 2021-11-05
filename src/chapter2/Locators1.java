@@ -14,7 +14,7 @@ public class Locators1 {
 		 * test. Later I'll show you how to just import this instead of cutting
 		 * and pasting it into every test. 
 		 */
-		String driverPath = "/Users/douggorman/webdrivers/chromedriver";
+		String driverPath = "path to your driver";
 		String urlPath = "https://www.google.com";
 		System.setProperty("webdriver.chrome.driver", driverPath);
 		WebDriver driver = new ChromeDriver();
@@ -58,7 +58,10 @@ public class Locators1 {
 		 */
 				
 		//Find the search field by name and send text to it
-		driver.findElement(By.name("q")).sendKeys("Selenium");
+		
+		//Uncomment the line below
+		//driver.findElement(By.name("q")).sendKeys("Selenium");
+		
 		/*
 		 * In this example, we used the findElement method then specified how we want to find the 
 		 * element - By.name - and provided the name from our input field. Once it is found, we use a chained
@@ -66,7 +69,8 @@ public class Locators1 {
 		 */
 		
 		//Now let's find the search field by class name and some more text to it
-		driver.findElement(By.className("gLFyf")).sendKeys(" Automated Testing");
+		//Uncomment the line below
+		//driver.findElement(By.className("gLFyf")).sendKeys(" Automated Testing");
 		
 		/*
 		 * Did you notice anything when you ran the line above? It added text to the search field, didn't it?
@@ -74,7 +78,8 @@ public class Locators1 {
 		 * field.
 		 */
 		
-		driver.findElement(By.name("q")).clear();
+		//Uncomment the line below
+		//driver.findElement(By.name("q")).clear();
 		
 		//Now we have clear search field to work with!
 		
@@ -88,7 +93,8 @@ public class Locators1 {
 		 * Let's see if we can get the text of the about link and log it to the console by looking for it by class
 		 */
 		
-		System.out.println(driver.findElement(By.className("MV3Tnb")).getText());
+		//Uncomment the line below
+		//System.out.println(driver.findElement(By.className("MV3Tnb")).getText());
 		
 		/*
 		 * We passed the driver.findElement method call into the System.out.println method and logged
@@ -97,8 +103,9 @@ public class Locators1 {
 		 * 
 		 * Let's take a look at using link text to find an element next.
 		 */
-				
-		driver.findElement(By.linkText("Store")).click();
+		
+		//Uncomment the line below
+		//driver.findElement(By.linkText("Store")).click();
 		
 		/*
 		 * In the example above we passed told Selenium to find the button with the text 'About' and click it.
@@ -108,9 +115,10 @@ public class Locators1 {
 		 * First, lets get the title of the page we are on and the url and log both to the console.
 		 */
 		
-		String pageTitle = driver.getTitle();
-		String pageUrl = driver.getCurrentUrl();
-		System.out.println("The current page title is: " + pageTitle + ". And it's URL is: " + pageUrl);
+		//Uncomment the lines below
+		//String pageTitle = driver.getTitle();
+		//String pageUrl = driver.getCurrentUrl();
+		//System.out.println("The current page title is: " + pageTitle + ". And it's URL is: " + pageUrl);
 		
 		/*
 		 * You can these methods to validate the page you are on is the correct one and many other things.
@@ -118,7 +126,8 @@ public class Locators1 {
 		 * Now, let's get back to the search page!
 		 */
 		
-		driver.navigate().back();
+		//Uncomment the line below
+		//driver.navigate().back();
 		
 		/*
 		 * Here we used the driver's navigate method and chained the back method to it to return to the search page.
@@ -126,9 +135,10 @@ public class Locators1 {
 		 * Let's get the page title and url again and put them in the console to make sure we went back the search page
 		 */
 		
-		String page2Title = driver.getTitle();
-		String page2Url = driver.getCurrentUrl();
-		System.out.println("The current page title is: " + page2Title + ". And it's URL is: " + page2Url);
+		//Uncomment the lines below
+		//String page2Title = driver.getTitle();
+		//String page2Url = driver.getCurrentUrl();
+		//System.out.println("The current page title is: " + page2Title + ". And it's URL is: " + page2Url);
 		
 		/*
 		 * Now lets use xpath and css to find elements on the page
@@ -144,7 +154,8 @@ public class Locators1 {
 		 * target="_top">Images</a>
 		 */
 		
-		driver.findElement(By.cssSelector("a[class='gb_f")).click();
+		//Uncomment the line below
+		//driver.findElement(By.cssSelector("a[class='gb_f")).click();
 		
 		/*
 		 * css selectors use the following notation inside of the cssSelector method:
@@ -154,8 +165,9 @@ public class Locators1 {
 		 * Now lets try to find the same link with xpath, but first we need to go back to the search page
 		 */
 		
-		driver.navigate().back();
-		driver.findElement(By.xpath("//a[@class='gb_f']")).click();
+		//Uncomment the lines below
+		//driver.navigate().back();
+		//driver.findElement(By.xpath("//a[@class='gb_f']")).click();
 		
 		/*
 		 * xpath notation is pretty similar to css':
