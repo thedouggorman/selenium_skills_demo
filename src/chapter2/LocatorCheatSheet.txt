@@ -1,0 +1,49 @@
+*** Basic Locator Types ***
+
+1. Link text
+2. Name
+3. Class Name
+4. Id
+5. Tag name
+6. Partial link text
+7. Xpath
+8. CSS selector
+
+*** Xpath Selector Notation ***
+
+1. Basic format
+//tagname[@attribute='value']
+e.g. //input[@name='signin']
+
+2. Child items
+//tagname[@attribute='value'][index]
+e.g. //input[name='signin][2]
+
+3. Xpath path
+//tagname/child_tagname
+e.g. //form/h1
+
+4. Regular expression
+//tagname[contains(@attribute, 'value')]
+e.g. //input[contains(@name, 'signin)]
+
+*** CSS Selector Notation ***
+
+1. Tagname
+Tagname[attribute='value']
+e.g. a[text='signin']
+
+2. Class name
+tagname.classname
+e.g. a.signin, Button.submit, .message
+
+3. Id
+tagname#id
+e.g. input#phoneNumber
+
+4. Child items
+tagname[attribute='value']:nth-child(index)
+e.g. input[text='About']:nth-child(2)
+
+5. Regular expression
+tagname[attribute*='value']

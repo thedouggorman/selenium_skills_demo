@@ -23,4 +23,11 @@ In this chapter, I have gone from the bare, empty git repo and added the basic e
 * I added dependencies for two maven packages in the pom.xml file (basically the Maven package.json - if you're familiar with Node) - Selenium and TestNG. Selenium has everything we need to orchestrate our tests and TestNG has some cool assertions we'll use in future chapters.
 * I added a new folder, Chapter1, and in there I created my first Selenium "test" - OpenAndCloseABrowser. It's really more a script because at the moment, it doesn't test anything with assertions. For details about what's going on this chapter's skill example check the source for that file on this commit and read the comments.
 
+2 - Interact With A Web Page Using Locators
+SKILL DEMONSTRATED: Using locators to find and interact with elements of web page.
+In this chapter, we will interact with a demo web app and use Selenium's locators to find elements on it's pages and take actions on them - the core of Selenium's automation toolkit!
+
+* Details are found in the comments in the code in the chapter2 folder.
+* I've included a quiz to help you learn locator syntax.
+
 
